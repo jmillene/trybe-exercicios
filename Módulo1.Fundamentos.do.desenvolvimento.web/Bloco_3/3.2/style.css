@@ -1,0 +1,33 @@
+/* 1 - Modifique o família do h1 para sans-serif  */
+
+h1 {
+  font-family: sans-serif;
+}
+
+/* 2 - Deixe o parágrafo com o font-weight 600 */
+p {
+  font-weight: 600;
+}
+/* 3 - Modifique o font-size do body para 16px  body*/
+
+body {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 40px; /* espaçamento das linhas */
+  text-decoration: underline;
+}
+.color-style {
+  background-color: yellow;
+}
+.color-sty {
+  background-color: red;
+}
+
+.color-line {
+  background-color: brown;
+}
+
+p {
+  /* 4 - Coloque o tamanho do parágrafo com o tamanho de 3 vezes o padrão do body */
+  font-size: 3em;
+}
