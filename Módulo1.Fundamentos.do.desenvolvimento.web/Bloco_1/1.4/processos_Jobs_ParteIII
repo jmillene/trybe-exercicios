@@ -1,0 +1,81 @@
+Parte III - Processos & Jobs
+
+1 - Liste todos os processos;
+
+➜  Desktop ps
+  PID TTY           TIME CMD
+  887 ttys000    0:02.39 -zsh
+➜  Desktop 
+
+2 - Agora use o comando sleep 30 & ;
+
+➜  Desktop sleep 30 &
+[1] 1809
+➜  Desktop 
+[1]  + 1809 done       sleep 30
+➜  Desktop 
+
+3 - Use a listagem de processos para encontrar o PID do processo que está executando o comando sleep 30 e termine a sua execução (mate o processo) ;
+
+➜  ~ sleep 30 &
+[1] 1999
+➜  ~ ps
+  PID TTY           TIME CMD
+ 1861 ttys000    0:00.58 -zsh
+ 1999 ttys000    0:00.01 sleep 30
+➜  ~ kill 1999
+[1]  + 1999 terminated  sleep 30 
+                                               
+4 - Execute novamente o comando sleep 30 , mas agora sem o & . Depois, faça com que ele continue executando em background;
+
+➜  ~ sleep 30
+^Z
+[1]  + 2039 suspended  sleep 30
+➜  ~ bg
+[1]  + 2039 continued  sleep 30
+➜  ~ 
+
+5 - Crie um processo em background que rode o comando sleep por 300 segundos.
+
+
+➜  ~ sleep 300 &                                                              
+[1] 2058
+➜  ~ 
+
+6 - Crie mais dois processos que rodem o comando sleep por 200 e 100 segundos, respectivamente. Você deve criá-los em foreground (sem usar o & ) e enviá-los para background após cada um começar a executar.
+
+➜  ~ sleep 300 &
+[2] 5316
+➜  ~ sleep 200
+^Z
+[3]  + 5333 suspended  sleep 200
+➜  ~ sleep 100 
+^Z
+[4]  + 5345 suspended  sleep 100
+➜  ~ 
+
+7 - Verifique que apenas o processo sleep 300 está em execução com o comando jobs . Suspenda a execução desse processo.
+Você vai precisar trazer o processo para foreground ( fg ) e suspendê-lo ( ctrl+z ), ou enviar um sinal.
+
+➜  ~ jobs
+[1]    running    sleep 300
+[2]  - suspended  sleep 200
+[3]  + suspended  sleep 100
+➜  ~ fg %1
+[1]    5498 running    sleep 300
+^Z
+[1]  + 5498 suspended  sleep 300
+
+8 - Retome a execução do processo sleep 100 em background com o comando bg .
+
+➜  ~ bg %3
+[3]    5513 continued  sleep 100
+[3]    5513 done       sleep 100                                                
+➜  ~ 
+
+9 -Termine a execução de todos os processos sleep (mate os processos) 
+
+➜  ~ killall sleep
+[2]  - 5507 terminated  sleep 200
+[1]  + 5498 terminated  sleep 300
+➜  ~ 

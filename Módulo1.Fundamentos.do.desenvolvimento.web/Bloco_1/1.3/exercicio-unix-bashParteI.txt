@@ -1,0 +1,151 @@
+Comandos realizados para realização do exercícios parte 1 Unix & Bash
+
+Questão 1 -  Utilizando o terminal, aplique o comando de criação de diretórios que você aprendeu, crie um diretório chamado unix_tests e navegue até ele.
+       
+1 passo - ls
+2 passo mkdir unix_tests
+
+Questão 2 - Crie um arquivo de texto com o nome trybe.txt .
+
+➜  ~ cd unix_tests 
+➜  unix_tests touch trybe.txt
+➜  unix_tests ls
+trybe.txt
+➜  unix_tests 
+
+Questão 3 - Crie uma cópia do arquivo trybe.txt com nome trybe_backup.txt .
+
+➜  unix_tests cp trybe.txt trybe_backup.txt
+➜  unix_tests ls
+trybe.txt        trybe_backup.txt
+               
+Questão 4 -  Renomeie o arquivo trybe.txt .
+
+➜  unix_tests mv trybe.txt trybe2.txt
+➜  unix_tests ls
+trybe2.txt       trybe_backup.txt
+➜  unix_tests 
+
+Questão 5 - Dentro de unix_tests , crie um novo diretório chamado backup .
+
+➜  unix_tests mkdir backup
+➜  unix_tests ls
+backup           trybe2.txt       trybe_backup.txt
+➜  unix_tests 
+
+Questão 6 - Mova o arquivo trybe_backup.txt para o diretório backup .
+
+➜  unix_tests ls      
+backup           trybe2.txt       trybe_backup.txt
+➜  unix_tests mv trybe_backup.txt backup
+➜  unix_tests ls
+backup     trybe2.txt
+➜  unix_tests cd backup 
+➜  backup ls
+trybe_backup.txt
+➜  backup 
+
+Questão 7 - Dentro de unix_tests , crie um novo diretório chamado backup2 .
+
+➜  backup cd ..
+➜  unix_tests mkdir backup2
+➜  unix_tests ls
+backup     backup2    trybe2.txt
+➜  unix_tests 
+
+Questão 8 - Mova o arquivo trybe_backup.txt da pasta backup para a pasta backup2 .
+
+➜  backup mv trybe_backup.txt /Users/jessica/unix_tests/backup2
+
+Questão 9 - Apague a pasta backup .
+
+➜  backup2 cd ..     
+➜  unix_tests ls
+backup  backup2
+➜  unix_tests rm -d backup
+➜  unix_tests ls
+backup2
+➜  unix_tests 
+
+Questão 10 - Renomeie a pasta backup2 para backup .
+
+➜  unix_tests mv backup2 backup
+➜  unix_tests ls
+backup
+➜  unix_tests 
+
+Questão 11 - Veja qual o path completo do diretório atual e liste todos os arquivos dentro dele.
+
+
+ls -l
+
+Questão 12  - Apague o diretório backup .
+
+➜  unix_tests ls 
+backup
+➜  unix_tests cd backup 
+➜  backup ls
+trybe_backup.txt
+➜  backup rm -f trybe_backup.txt 
+➜  backup cd ..    
+➜  unix_tests ls
+backup
+➜  unix_tests rm -d backup
+➜  unix_tests ls
+➜  unix_tests 
+
+Questão 13 - Limpe o terminal.
+
+clear
+
+Questão 14 - Mostre na tela as 5 primeiras skills do arquivo skills.txt 
+
+
+jessica@jessica:~$ cd Documentos
+jessica@jessica:~/Documentos$ touch skills.txt
+jessica@jessica:~/Documentos$ ls
+skills.txt  testes
+jessica@jessica:~/Documentos$ cat > skills.txt 
+Internet
+Unix
+Bash
+HTML
+CSS
+JavaScript
+React
+SQL
+^C
+jessica@jessica:~/Documentos$ cat skills.txt 
+Internet
+Unix
+Bash
+HTML
+CSS
+JavaScript
+React
+SQL
+jessica@jessica:~/Documentos$ head -5 skills.txt 
+Internet
+Unix
+Bash
+HTML
+CSS
+jessica@jessica:~/Documentos$ 
+
+15 -  Mostre na tela as 4 últimas skills do arquivo skills.txt .
+
+jessica@jessica:~/Documentos$ tail -4 skills.txt 
+CSS
+JavaScript
+React
+SQL
+jessica@jessica:~/Documentos$ 
+
+16 - Apague todos os arquivos que terminem em .txt .
+
+jessica@jessica:~/Documentos$ ls
+skills.txt  testes
+jessica@jessica:~/Documentos$ rm *.txt
+jessica@jessica:~/Documentos$ ls
+testes
+jessica@jessica:~/Documentos$ 
