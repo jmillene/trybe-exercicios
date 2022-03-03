@@ -1,8 +1,8 @@
 # Trybe
 
-Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[Jéssica Milene](https://www.linkedin.com/in/j%C3%A9ssica-milene-souza-alves-007341229/)_ enquanto estudava em _[Trybe](https://www.betrybe.com/?utm_source=google&utm_medium=cpc&utm_campaign=pmax&utm_content=ad1&gclid=Cj0KCQiA64GRBhCZARIsAHOLriJ_p4aCx941OqHD2GmaJx8pjzvmtBJQReX1tXB2bZ9j5gYBJItGvW0aAj-JEALw_wcB)_
+Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[Jéssica Milene](https://www.linkedin.com/in/j%C3%A9ssica-milene-souza-alves-007341229/)_ enquanto estudava em _[Trybe](https://www.betrybe.com/?utm_source=google&utm_medium=cpc&utm_campaign=pmax&utm_content=ad1&gclid=Cj0KCQiA64GRBhCZARIsAHOLriJ_p4aCx941OqHD2GmaJx8pjzvmtBJQReX1tXB2bZ9j5gYBJItGvW0aAj-JEALw_wcB)_ 
 
-_ "A Trybe é uma escola do futuro para quem quer melhorar de vida e construir uma carreira de sucesso em tecnologia, onde a pessoa só paga quando consegue um bom emprego."
+"A Trybe é uma escola do futuro para quem quer melhorar de vida e construir uma carreira de sucesso em tecnologia, onde a pessoa só paga quando consegue um bom emprego."
 
 O programa tem mais de 1.500 horas de aulas presenciais e online, e apresenta a introdução de desenvolvimento de software, front-end, back-end, ciência da computação, engenharia de software, metodologias avançadas e habilidades comportamentais.
 
