@@ -1,6 +1,6 @@
 # Trybe
 
-Este repositório contém todas as atividades de aprendizagem desenvolvidas por _ [Jéssica Milene] (Lhttps://www.linkedin.com/in/j%C3%A9ssica-milene-souza-alves-007341229/) _ enquanto estudava em [Trybe] (https://www.betrybe.com/)
+Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[Jéssica Milene](https://www.linkedin.com/in/j%C3%A9ssica-milene-souza-alves-007341229/)_ enquanto estudava em _[Trybe](https://www.betrybe.com/?utm_source=google&utm_medium=cpc&utm_campaign=pmax&utm_content=ad1&gclid=Cj0KCQiA64GRBhCZARIsAHOLriJ_p4aCx941OqHD2GmaJx8pjzvmtBJQReX1tXB2bZ9j5gYBJItGvW0aAj-JEALw_wcB)_
 
 _ "A Trybe é uma escola do futuro para quem quer melhorar de vida e construir uma carreira de sucesso em tecnologia, onde a pessoa só paga quando consegue um bom emprego."
 
