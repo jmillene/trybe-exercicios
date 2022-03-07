@@ -18,3 +18,6 @@ birthCity = "Candiba";
 console.log(myName);
 console.log(birthCity);
 console.log(birthYear);
+
+
+// O valor da constante não pode ser mudado, por isso ocorreu erro no exercicio 4.
