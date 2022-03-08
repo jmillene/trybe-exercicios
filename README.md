@@ -6,7 +6,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 
 O programa tem mais de 1.500 horas de aulas presenciais e online, e apresenta a introdução de desenvolvimento de software, front-end, back-end, ciência da computação, engenharia de software, metodologias avançadas e habilidades comportamentais.
 
-## Fundamentos do Desenvolvimento Web: white_check_mark:
+## Fundamentos do Desenvolvimento Web:
 
 ##### Bloco 1: Introdução - Unix e Shell
 
@@ -14,7 +14,7 @@ O programa tem mais de 1.500 horas de aulas presenciais e online, e apresenta a 
 - [x] 1-4: _Unix e Shell- Parte 2_
 
 ##### Bloco 2: Git e GitHub
-
+Lessons Learned
 - [x] 2-1: _O que é e para que serve? _
 - [x] 2-2: _Compreendendo os Comandos_
 - [x] 2-3: _Internet - Entendendo como funciona_
@@ -22,10 +22,10 @@ O programa tem mais de 1.500 horas de aulas presenciais e online, e apresenta a 
 ##### Bloco 3: Introdução - HTML e CSS
 
 - [x] 3-1: _HTML e CSS - Estruturas de página_
-- [] 3-2: _HTML e CSS - Introdução ao CSS_
-- [] 3-3: _HTML e CSS - Seletores e posicionamento_
-- [] 3-4: _HTML semântico_
-- [] 3-5: _ [Projeto - HTML e CSS] () _
+- [x] 3-2: _HTML e CSS - Introdução ao CSS_
+- [x] 3-3: _HTML e CSS - Seletores e posicionamento_
+- [x] 3-4: _HTML semântico_
+- [x] 3-5: _[Projeto - Lessons Learned](https://github.com/tryber/sd-021-a-project-lessons-learned/pull/85)_ 
 
 ##### Bloco 4: Introdução - JavaScript
 
