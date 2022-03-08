@@ -4,15 +4,19 @@
 // Se for algum dia de fim de semana, imprima "FINALMENTE, descanso merecido UwU".
 // Experimente trocar o valor da string ou até mesmo montar seu próprio algoritmo. Esse assunto é muito importante para seu aprendizado :).
 
-
-let weekDay = "terça-feira";
-
+let weekDay = prompt ("Digite um dia da semana :  ")
+document.write();
+ 
 if (weekDay === "segunda-feira" || weekDay === "terça-feira" || weekDay === "quarta-feira" || weekDay ==="quinta-feira" || weekDay=== "sexta-feira"){
 
-    console.log("Oba, mais um dia de aprendizado na Trybe >:D");
+    alert ("Oba, mais um dia de aprendizado na Trybe >:D");
 }
 
 else 
 {
-    console.log("FINALMENTE, descanso merecido UwU");
+    alert ("FINALMENTE, descanso merecido UwU");
 }
+
+// fonte de apredizado https://www.devmedia.com.br/
+
+
