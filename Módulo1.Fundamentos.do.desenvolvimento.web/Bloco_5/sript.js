@@ -1,1 +1,0 @@
-const paragraph = document.getElementById("paragraph");
