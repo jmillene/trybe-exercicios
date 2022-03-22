@@ -13,33 +13,29 @@
 <script>
   //   Acesse o elemento elementoOndeVoceEsta .
   const r = document.getElementById("elementoOndeVoceEsta");
-  //   Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.const 
+  //   Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.const
   pai = elementoOndeVoceEsta.parentNode;
   pai.style.color = "red";
 
-//   Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
-const primeiroFilho = elementoOndeVoceEsta.firstElementChild;
-primeiroFilho.innerText = 'Estou aprendendo, Graças a Deus';
+  //   Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+  const primeiroFilho = elementoOndeVoceEsta.firstElementChild;
+  primeiroFilho.innerText = "Estou aprendendo, Graças a Deus";
 
-// Acesse o primeiroFilho a partir de pai .
+  // Acesse o primeiroFilho a partir de pai .
 
-const primeiroFilho  = pai.firstElementChild;
+  const primeiroFilho = pai.firstElementChild;
 
-// Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
+  // Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
 
-const primeiroFilho = elementoOndeVoceEsta.nextElementSibling;
+  const primeiroFilho = elementoOndeVoceEsta.nextElementSibling;
 
-// Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
+  // Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
 
-const acessarTexto = elementoOndeVoceEsta.nextSibling;
+  const acessarTexto = elementoOndeVoceEsta.nextSibling;
 
-// Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
+  // Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
 
-const terceiroFilho = elementoOndeVoceEsta.nextElementSibling;
+  const terceiroFilho = elementoOndeVoceEsta.nextElementSibling;
 
-const acessarTerceiroFilho = pai.lastElementChild.previousElementSibling;
-
-
-
-
+  const acessarTerceiroFilho = pai.lastElementChild.previousElementSibling;
 </script>
