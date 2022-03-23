@@ -18,24 +18,37 @@
   // Crie um filho para primeiroFilhoDoFilho .
   // A partir desse filho criado, acesse terceiroFilho .
 
-  const pai = document.getElementById('pai');
-  const irmaoOndeVoceEsta =  document.createElement ('section');
-  irmaoOndeVoceEsta.id = ('irmaoOndeVoceEsta')
+  const pai = document.getElementById("pai");
+  const irmaoOndeVoceEsta = document.createElement("section");
+  irmaoOndeVoceEsta.id = "irmaoOndeVoceEsta";
   pai.appendChild(irmaoOndeVoceEsta);
 
-  const filho = document.getElementById('elementoOndeVoceEsta');
-  const filhoOndeVoceEsta = document.createElement('li');
-  filhoOndeVoceEsta.id = ('filhoOndeVoceEsta');
-  filho.append(filhoOndeVoceEsta)
+  const filho = document.getElementById("elementoOndeVoceEsta");
+  const filhoOndeVoceEsta = document.createElement("li");
+  filhoOndeVoceEsta.id = "filhoOndeVoceEsta";
+  filho.append(filhoOndeVoceEsta);
 
-  const irmao = document.getElementById('primeiroFilhoDoFilho');
-  const filhoPrimeiroFilho = document.createElement ('p');
-  filhoPrimeiroFilho.id = ('filhoPrimeiroFilho');
+  const irmao = document.getElementById("primeiroFilhoDoFilho");
+  const filhoPrimeiroFilho = document.createElement("p");
+  filhoPrimeiroFilho.id = "filhoPrimeiroFilho";
   irmao.appendChild(filhoPrimeiroFilho);
 
-  const filhoCriado = document.getElementById('filhoPrimeiroFilho');
-  const terceiroFilhoDoFilho = document.createElement('section');
-  terceiroFilhoDoFilho.id = ('terceiroFilhoDoFilho');
-  filhoCriado.appendChild(terceiroFilhoDoFilho);
+  const terceiroFilho =
+    filhoPrimeiroFilho.parentElement.parentElement.nextElementSibling; // terceiroFilho
+  console.log(terceiroFilho);
+
+//   Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+
+const removerElemento = document.getElementById('pai');
+
+for (let index = removerElemento.childNodes.length - 1; index >= 0; index -= 1) {
+      const currentChildren = removerElemento.childNodes[index];
+      if (currentChildren.id !== 'elementoOndeVoceEsta') {
+        currentChildren.remove();
+      }
+    }
+
+
+
 
 </script>
