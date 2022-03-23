@@ -121,8 +121,15 @@
       for (let index = 0; index < numbers.length; index += 1) {
         const addLi = document.createElement("li");
         addLi.innerText= numbers[index];
-        addLista.appendChild(addLi)
+        addLista.appendChild(addLi);
       }
+      // Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
+for (let index = 1; index <= 3;index+=1){
+      const addTag = document.createElement('h3');
+      addTag.innerHTML= 'teste' + index;
+      newTag.appendChild(addTag);
+}
+
     </script>
   </body>
 </html>
