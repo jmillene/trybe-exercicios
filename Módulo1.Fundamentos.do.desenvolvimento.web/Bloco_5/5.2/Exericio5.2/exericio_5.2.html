@@ -60,7 +60,7 @@
       // COLOQUE SEU CÓDIGO AQUI
       // 1-Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
       const criarTag = document.createElement("h1");
-      criarTag.innerText = "Exercício 5.2";
+      criarTag.innerText = "JavaScript DOM";
       document.body.appendChild(criarTag);
 
       //2- Adicione a tag main com a classe main-content como filho da tag body ;
@@ -120,16 +120,53 @@
       ];
       for (let index = 0; index < numbers.length; index += 1) {
         const addLi = document.createElement("li");
-        addLi.innerText= numbers[index];
+        addLi.innerText = numbers[index];
         addLista.appendChild(addLi);
       }
       // Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
-for (let index = 1; index <= 3;index+=1){
-      const addTag = document.createElement('h3');
-      addTag.innerHTML= 'teste' + index;
-      newTag.appendChild(addTag);
-}
+      for (let index = 1; index <= 3; index += 1) {
+        const addTag = document.createElement("h3");
+        addTag.innerHTML =  index;
+        newTag.appendChild(addTag);
+      }
+      // Adicione a classe title na tag h1 criada;
 
+      const addTitle = document.querySelector("h1");
+      addTitle.className = "title";
+
+      // Adicione a classe description nas 3 tags h3 criadas;
+      const tagH3 = document.querySelectorAll("h3");
+      for (let index = 0; index < 3; index += 1) {
+        tagH3[index].className = "description";
+      }
+
+      // Remova a section criado no passo 5
+      // (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+      const removerSection = document.getElementsByClassName("left-content")[0];
+      newTag.removeChild(removerSection);
+
+      // Centralize a section criado no passo 6
+      // aquele que possui a classe right-content ). Dica: para centralizar,
+      // basta configurar o margin-right: auto da section ;
+      const centralizarSessao =
+        document.getElementsByClassName("right-content ")[0];
+      centralizarSessao.style.marginRight = "auto";
+
+      // Troque a cor de fundo do elemento pai da
+      // section criada no passo 3
+      // (aquela que possui a classe center-content ) para a cor verde;
+
+      const trocaCor = document.getElementsByClassName("center-content")[0];
+      trocaCor.style.backgroundColor = "red";
+
+      // Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+      let listas = document.querySelectorAll("li");
+for (let i in listas) {
+    if (
+      listas[i].innerText.includes("Nove") || listas[i].innerText.includes("Dez")) {
+        document.querySelector("ul").removeChild(listas[i]);
+    }
+}
     </script>
   </body>
 </html>
