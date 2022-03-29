@@ -1,90 +1,21 @@
-<!-- Para fixar
-Vamos praticar um pouco, criando uma tela de login? 🔥
-1 - Adicione os campos de entrada para email e senha.
-2 - Adicione um checkbox com o texto Lembre-me .
-3 - Adicione um botão com o texto Entrar .
-4 - Adicione os placeholder Digite seu email e Digite sua senha para os campos de email e senha.
-5 - Adicione o atributo required para os campos de email e senha.
-6 - Adicione o atributo autocomplete="off" para o campo de email.
-7 - Adicione o atributo autofocus para o campo de email. -->
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fixar</title>
-  </head>
-  <body>
-    <section>
-      <!-- <form action="" method="POST">
-        <label for="text">E-mail</label>
-        <input
-          type="email"
-          name="email"
-          placeholder="Digite seu e-mail"
-          required
-          id="text"
-          autocomplete="off"
-          autofocus
-        />
-        <br />
-        <br />
-        <label for="password">Senha</label>
-        <input
-          name="senha"
-          type="password"
-          placeholder="Digite sua senha"
-          required
-          id="password"
-        />
-        <br />
-        <input type="checkbox" />Lembre-me <br />
-        <br />
-        <button>Entrar</button> <br />
-        <br /> -->
-        <h1>Formulário</h1>
-        <form action="" method="get" enctype="multipart/form-data">
-            <label for="nome-completo">Nome Completo
-                <input type="text" name="nome" id="nome-copleto" placeholder="Digite seu nome completo" required>
-            </label> <br>
-            <label for="">
-                <input type="email" name="email" id="input-email" placeholder="Digite seu e-mail">
-            </label>
-            <br>
-            <label for="input-estado"> Escolha o estado onde você mora :
-        <select name="estado" id="input-estado">
-          <option value="Ba">Bahia</option>
-          <option value="Rj">Rio de Janeeiro</option>
-          <option value="Pr">Paraná</option>
-        </select>
-    </label>
-        <br>
-        <p>Selecione sua Foto</p>
-        <input type="file" name="foto" id="foto"> <br>
-        <p>Comida Favorita</p>
-        <label for="comida-1">
-        <input type="radio" id="comida-1" name="comida-favorita" value="pizza" checked> Pizza
-        <input type="radio" id="comida-2" name="comida-favorita" value="sorvete" > sorvete
-        <input type="radio" id="comida-3" name="comida-favorita" value="Pão d queijo" > Pão de queijo
-        <input type="radio" id="comida-4" name="comida-favorita" value="Farofa"> Farofa
-    </label>
-    <br>
-    <p>Escreva algo sobre você</p>
-   <textarea name="sobre-voce" id="texr-area" cols="30" rows="5"></textarea>
-   <br>
-   <p>Digite sua senha</p>
-   <label for="input-senha">
-       <input type="password" name="senha" id="input-senha" required>
-   </label>
-   <br>
-   <label for="checkbox-notificacoes">
-       <input type="checkbox" name="promocoes" id="checkbox-notificacoes"> Deseha receber nossas promoções?
-   </label>
-   <br>
-   <button>Enviar Formulário</button>
-      </form>
-    </section>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="www.betrybe.com" target="_blank" id="href">TRYBE</a>
+    <input type="text" id="input-text"/>
+    <input type="checkbox" id="input-checkbox" />
+    
+</body>
+<script src="script.js"></script> 
 </html>
+
+<!-- 1 - Adicione um evento click no elemento a que possui o id href . Na função do evento, implemente o método .preventDefault() para previnir o comportamento padrão do elemento. Ou seja, ao clicar no link, nada deve acontecer.
+2 - Adicione um evento click no elemento checkbox que possui o id input-checkbox . Na função do evento, implemente o método .preventDefault() para previnir o comportamento padrão do elemento. Ou seja, ao clicar na caixinha, nada deve acontecer.
+3 - Adicione um evento keypress no elemento input type="text" que possui o id input-text . Na função do evento, implemente o método .preventDefault() de forma que somente o caractere a (letra 'a' minúscula) possa ser digitado na caixinha. ( dica: para capturar a tecla digitada, utilize o event.key )
+Caso deseje entender melhor o comportamento do método .preventDefault() , acesse a documentação do MDN ou a página da w3schools . -->
