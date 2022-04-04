@@ -1,11 +1,12 @@
 function buttonSubmit (event) {
     event.preventDefault()
+//ref https://developer.mozilla.org/
 
 }
+window.onload = function(){
 const btn = document.querySelector('#buttonSubmit');
-btn.addEventListener('click', buttonSubmit, false)
-
-//ref https://developer.mozilla.org/
+btn.addEventListener('click', buttonSubmit, true);
+}
 
 const input = document.querySelectorAll('input') //quero limpar meus inputs.
 const texto = document.querySelector('textarea')
@@ -38,3 +39,17 @@ aceitar.addEventListener('click', () =>{
 });
 }
 termos();
+
+function submit(){
+    const caracteres = document.querySelector('inputs') 
+    caracteres.addEventListener('click', () =>{
+        if(caracteres.value = ''){
+            alert ('Dados inválidos')
+        }
+        else {
+            alert ('Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip.')
+        }
+    });
+    }
+    submit();
+
