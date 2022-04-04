@@ -6,10 +6,11 @@ const btn = document.querySelector('#buttonSubmit');
 btn.addEventListener('click', buttonSubmit, false)
 
 //ref https://developer.mozilla.org/
+
 const input = document.querySelectorAll('input') //quero limpar meus inputs.
 const texto = document.querySelector('textarea')
 const botao = document.querySelector('#buttonApagar')
-botao.addEventListener('click', limpa)
+
 
 function limpa(){
     //primeiro eu quero que o botão limpe tudo que está contido no meu input
@@ -20,7 +21,20 @@ function limpa(){
         limpando.value = "" //meus inputs estão recebendo o valor vazio
         limpando.checked = false //isso porque as caixinhas de checkount ficam preenchidas e tenho que tirar o check delas
     }
-    texto.
-    value = ''
+    texto.value = ''
+
+    botao.addEventListener('click', limpa);
 }
-limpa();
+function termos(){
+const button = document.querySelector('#buttonSubmit');
+const aceitar = document.querySelector('#aceitar');
+aceitar.addEventListener('click', () =>{
+    if(aceitar.checked){
+        button.disabled = false;
+    }
+    else {
+        button.disabled = true;
+    }
+});
+}
+termos();

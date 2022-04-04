@@ -12,14 +12,14 @@
       <h1>Concorra a uma Viagem</h1>
       <label for=""
         >Nome Completo:
-        <input
+        <input 
           type="text"
           name="nome"
           required
           placeholder="Digite seu nome"
           minlength="10"
           maxlength="40"
-          id="campo1"
+          id="nome"
         />
       </label>
       <br />
@@ -31,7 +31,7 @@
           required
           placeholder="Digite seu e-mail"
           minlength="10"
-          maxlength="100" id="campo2"
+          maxlength="100" id="email"
         />
       </label>
     <br>
@@ -49,16 +49,17 @@
         <input type="radio" name="hub" id="option4"> Montanhas
     </label>
     <br>
-    <textarea name="text" id="campo3" cols="40" rows="10" minlength="10" maxlength="500"></textarea>
+    <textarea name="text" id="areaTexto" cols="40" rows="10" minlength="10" maxlength="500"></textarea>
     <!-- hub faz com que eu possa selecionar somente uma opção do meu radio. -->
 <br>
 <label for="date"> Qual a melhor data para realizar sua viagem?
-    <input type="date"> <br>
+    <input type="date" required> <br>
     <input type="checkbox"> Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe? <br>
-    <input type="checkbox" required> Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+    <input type="checkbox" id="aceitar"> Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
 </label> <br>
-<button type="submit" id="buttonSubmit">Participar</button> <button type="buttonApagar">Apagar</button>
+<button type="submit" id="buttonSubmit" disabled>Participar do Sorteio</button> <button type="buttonApagar">Apagar</button>
 </form>
+<footer id="footer">Direitos reservados©</footer>
 <script src="script.js"></script>
   </body>
 </fieldset>
