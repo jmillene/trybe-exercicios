@@ -40,16 +40,34 @@ aceitar.addEventListener('click', () =>{
 }
 termos();
 
-function submit(){
-    const caracteres = document.querySelector('inputs') 
-    caracteres.addEventListener('click', () =>{
-        if(caracteres.value = ''){
+function campos (){
+    const name = document.querySelector('#nome').value.length;
+    const email = document.querySelector('#email').value.length;
+    const text = document.querySelector('#areaTexto').value.length;
+    if (name < 10 || name > 40){
+        return false;
+    }
+    else if (email < 10 || email > 50)
+{
+    return false;
+}
+else if (text > 500) {
+    return false;
+}
+
+    else {
+        return true;
+    }
+}
+
+function buttonSubmit(event) {
+    event.preventDefault();
+    const inputsCampos = campos();
+        if(inputsCampos === false){
             alert ('Dados inválidos')
         }
         else {
             alert ('Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip.')
         }
-    });
     }
-    submit();
 
