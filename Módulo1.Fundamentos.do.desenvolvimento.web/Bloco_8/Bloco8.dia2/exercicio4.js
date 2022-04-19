@@ -94,3 +94,5 @@ function oldBooksOrdered() {
   return books.filter((element) => element.releaseYear < date - 60).sort((a, b) => a.releaseYear - b.releaseYear);
 }
 console.log(oldBooksOrdered(books));
+
+// Ref calcular ano que nasceu https∏|://blog.dbins.com.br/calculando-a-idade-com-javascript
