@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=fu, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"
+      integrity="sha512-kp7YHLxuJDJcOzStgd6vtpxr4ZU9kjn77e6dBsivSz+pUuAuMlE2UTdKB7jjsWT84qbS8kdCWHPETnP/ctrFsA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- acima eu entrei nos sites da babel cdn e reeat cnd e estou colocando os scripts, isso seria o react puro -->
+  </head>
+  <body>
+    <div id="root">
+    <!-- <section>
+      <h1>HTML PURO</h1>
+    </section> -->
+</div>
+    <script type="text/babel">
+      function Message () {
+          return (
+            <section>
+              <h1>HTML PURO</h1>
+              <h2>Olá Mundo</h2>
+              <h3>Aqui estamos vendo React Puro</h3>
+            </section>
+          )
+      }
+      ReactDOM.render(
+          <Message/>, //primeiro argumento
+        document.querySelector('#root') //onde quero adicionar 
+      )
+    </script>
+  </body>
+  <!-- <script>
+    function CreateDivRoot() {
+    const divRoot = document.querySelector('#root')
+    const section = document.createElement('section')
+    const h1 = document.createElement('h1')
+    h1.innerText = 'Bem-vindo Jéssica'
+    // primeiro chamo o pai e depois apendo o filho.
+    divRoot.appendChild(h1)
+    }
+    CreateDivRoot()
+</script> -->
+</html>
