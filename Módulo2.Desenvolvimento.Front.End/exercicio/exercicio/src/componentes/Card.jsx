@@ -11,7 +11,7 @@ class Card extends React.Component {
     );
   }
 }
-Card.prototype = {
-  name: PropTypes.string
-}
-export default Card;
+// Card.prototype = {
+//   name: PropTypes.string
+// }
+ export default Card;
