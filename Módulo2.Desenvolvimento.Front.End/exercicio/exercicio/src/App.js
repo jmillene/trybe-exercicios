@@ -8,6 +8,11 @@ class App extends React.Component {
         return (
       <main>
         <Header title = " O mundo de Rick e Morty" />
+        <section className="input-container">
+          <label>
+            <input type='text' placeholder="Busque seu personagem favorito"></input>
+          </label>
+        </section>
         <div>
           <section>
             { results.map(({name, id, image}) => {
