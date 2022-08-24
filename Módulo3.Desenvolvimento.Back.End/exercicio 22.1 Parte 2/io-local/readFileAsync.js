@@ -52,3 +52,5 @@ personagem(1);
 
 //pra ler é o parse
 //para escrever é o stringfy
+
+//test
