@@ -1,9 +1,21 @@
 const express = require('express');
 const app = express();
 
-app.get('/activities',(request,response)=> response.status(200).json({activities}))
+  app.get('/myActivities/:id',(req,res)=> {
+  const listarPorId = activities.find(({id})=> id === Number(req.params.id));
+  res.status(200).json(listarPorId);
+   });
 
-const activities = [
+app.get('/activities', (req, res)=>{
+  res.status(200).json({activities});
+});
+app.get('/myActivities',(req, res)=>
+  res.status(200).json({activities}));
+
+app.get('/filter/myActivities',(req,res)=> res.status(200).json)
+
+
+  const activities = [
   {
     id: 1,
     description: 'Banho no cachorro',
@@ -20,5 +32,6 @@ const activities = [
     status: 'Feito',
   },
 ];
+
 
 module.exports = app;
