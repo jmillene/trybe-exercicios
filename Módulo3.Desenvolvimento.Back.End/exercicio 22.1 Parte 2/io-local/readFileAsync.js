@@ -75,8 +75,10 @@
 const fs= require('fs').promises;
 async function adicionarNome () {
   try {
-    const data = await fs.readFile('./simpsonFamily.json', 'utf-8' )
-    console.log(data);
+    const data = await fs.readFile('./simpsonFamily.json','utf-8' )
+    const transformarJson = JSON.parse(data)
+    transformarJson.push( { id: '8', name: 'Nelson Muntz' })
+    console.log(transformarJson);
   } catch (error) {
     console.log(`erro ${error.message}`);
   }
