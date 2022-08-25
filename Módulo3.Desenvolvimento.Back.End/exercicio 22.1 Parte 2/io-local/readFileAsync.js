@@ -36,18 +36,50 @@
 // personagem(1);
 //pra ler é o parse
 //para escrever é o stringfy
-const fs = require('fs').promises;
-async function remover () {
-try {
-  const data = await fs.readFile('./simpsons.json', 'utf8');
-  const transformarJson = JSON.parse(data);
-  const date = transformarJson.filter((elemento)=>elemento.id !="1" && elemento.id != "10")
 
-  if(date.length === 8){
-    console.log("Arquivo removido com sucesso");
+//6.3 Crie uma função que altere o arquivo simpsons.json 
+//retirando os personagens com id 10 e 6.
+// const fs = require('fs').promises;
+// async function remover () {
+// try {
+//   const data = await fs.readFile('./simpsons.json', 'utf8');
+//   const transformarJson = JSON.parse(data);
+//   const date = transformarJson.filter((elemento)=>elemento.id !="1" && elemento.id != "10")
+
+//   if(date.length === 8){
+//     console.log("Arquivo removido com sucesso");
+//   }
+// } catch (error) {
+//   console.log(`Esse arquivo não pode ser removido:${error.message}`);
+// }
+// }
+// remover()
+
+// 6.4 Crie uma função que leia 
+// o arquivo simpsons.json e crie um novo arquivo,
+//  chamado simpsonFamily.json, contendo as personagens com id de 1 a 4.
+
+// const fs = require('fs').promises;
+// async function trocaNomeArquivo  () {
+// const data = await fs.rename('./simpsons.json','./simpsonFamily.json');
+// console.log(data);
+// const transformarJson = JSON.parse(data);
+// console.log(transformarJson);
+// const date = transformarJson.filter((elemento)=>{
+//   elemento.id === '1' && elemento.id === '4'
+// })
+// console.log(date);
+// }
+// trocaNomeArquivo();
+
+const fs= require('fs').promises;
+async function adicionarNome () {
+  try {
+    const data = await fs.readFile('./simpsonFamily.json', 'utf-8' )
+    console.log(data);
+  } catch (error) {
+    console.log(`erro ${error.message}`);
   }
-} catch (error) {
-  console.log(`Esse arquivo não pode ser removido:${error.message}`);
+ 
 }
-}
-remover()
+adicionarNome();
