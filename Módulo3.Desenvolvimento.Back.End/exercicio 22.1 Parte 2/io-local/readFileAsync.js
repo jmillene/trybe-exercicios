@@ -71,17 +71,37 @@
 // console.log(date);
 // }
 // trocaNomeArquivo();
-
-const fs= require('fs').promises;
-async function adicionarNome () {
-  try {
-    const data = await fs.readFile('./simpsonFamily.json','utf-8' )
-    const transformarJson = JSON.parse(data)
-    transformarJson.push( { id: '8', name: 'Nelson Muntz' })
-    console.log(transformarJson);
-  } catch (error) {
-    console.log(`erro ${error.message}`);
-  }
+//6..5Crie uma função que adicione ao arquivo simpsonFamily.json o personagem Nelson Muntz.
+// const fs= require('fs').promises;
+// async function adicionarNome () {
+//   try {
+//     const data = await fs.readFile('./simpsonFamily.json','utf-8' )
+//     const transformarJson = JSON.parse(data)
+//     transformarJson.push( { id: '8', name: 'Nelson Muntz' })
+//     console.log(transformarJson);
+//   } catch (error) {
+//     console.log(`erro ${error.message}`);
+//   }
  
-}
-adicionarNome();
+// }
+// adicionarNome();
+//6.6 Crie uma função que substitua o personagem
+ //Nelson Muntz pela personagem Maggie Simpson no arquivo simpsonFamily.json.
+
+ const fs = require('fs').promises;
+
+
+ async function mudarNome (){
+  try {
+    const data = await fs.readFile('./simpsonFamily.json','utf-8' );
+    const transformarJson = JSON.parse(data)
+    console.log(transformarJson);
+    const date = transformarJson.filter((elemento)=> elemento.id != 8)
+    console.log(date);
+    const novoArray = transformarJson.concat({ id: '15', name: 'Marge Simpson' },);
+    console.log(novoArray);
+  } catch (error) {
+    console.log( `Substituição não pode ocorrer ${error.message}`);
+  }
+ }
+ mudarNome();
