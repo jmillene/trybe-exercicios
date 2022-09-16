@@ -22,8 +22,28 @@ const { title, author, pageQuantity } = req.body
 const createService = await service.create({ title, author, pageQuantity } );
 return res.status(201).json(createService)
 }
+const update = async(req, res) =>{
+  const {id} = req.params;
+  const {title, author, pageQuantity} = req.body
+  const updates = await service.update(id,{title, author, pageQuantity})
+  if(!updates){
+    return res.status(404).json({ message: 'Book not found' })
+  }
+  return res.status(201).json({ message: 'Book updated' })
+}
+const remove = async (req, res) => {
+  const { id } = req.params;
+
+  const removed = await service.remove(id);
+
+  if (!removed) return res.status(404).json({ message: 'Book not found' });
+
+  res.status(200).json({ message: 'Book removed' });
+}
 module.exports = {
   books,
   booksId,
   create,
+  update,
+  remove,
 }
