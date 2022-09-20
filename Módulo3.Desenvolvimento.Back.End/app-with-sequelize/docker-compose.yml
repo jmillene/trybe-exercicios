@@ -1,0 +1,29 @@
+version: '3.0'
+
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - 3306:3306
+
+  api:
+    image: node:16
+    ports:
+      - 3000:3002
+    environment:
+      - DATABASE_USER=root
+      - DATABASE_PASSWORD=root
+      - DATABASE_HOSTNAME=mysql
+      - PORT=3000
+    volumes:
+      - ./:/app
+    user: node
+    working_dir: /app
+    command: bash
+    # As duas opções abaixo correspondem ao -it
+    tty: true # -t
+    stdin_open: true #-i 
+    depends_on:
+      - mysql
