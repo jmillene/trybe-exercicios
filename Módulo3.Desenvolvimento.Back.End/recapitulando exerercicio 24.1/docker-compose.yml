@@ -1,0 +1,51 @@
+version: "3"
+
+services:
+  # Serviço que irá rodar o node
+  node:
+    # Imagem base do container
+    image: node:16.14
+    # Nome do container para facilitar execução
+    container_name: exercicio_24_1
+    # Mesmo que `docker run -t`
+    tty: true
+    # Mesmo que `docker run -i`
+    stdin_open: true
+    # Substitui o comando padrão da imagem do node
+    command: bash # você pode subistituir `bash` por `npm run debug` para iniciar a API quando container for iniciado  
+    # Restarta a imagem caso algo a faça parar
+    # Diretório padrão de execução
+    working_dir: /home/node/app
+    # Lista de volumes (diretórios) mapeados de fora para dentro do container
+    volumes:
+      # Monta o diretório atual, com todos os dados do projeto, 
+      # dentro do diretório /app
+      - ./:/home/node/app
+    # Lista de serviços do qual este serviço depende
+    depends_on:
+      # Precisa do banco funcionando antes de subir o node
+      - db
+    # Lista de portas mapeadas de dentro para fora do container
+    # na notação porta_de_fora:porta_de_dentro
+    ports:
+      # Expõe a porta padrão da aplicação: altere aqui caso use outra porta
+      - 3000:3000
+      - 9229:9229
+    # Configura as variáveis de ambiente dentro do container
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_HOST: db # Nome do service logo abaixo
+      PORT: '3000'
+      HOST: localhost
+
+  # Serviço que irá rodar o banco de dados
+  db:
+    container_name: sequelize
+    image: mysql:8.0.23
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root'
+    ports:
+      # Garanta que não haverá conflitos de porta com um banco que esteja
+      # rodando localmente
+      - 3306:3306
