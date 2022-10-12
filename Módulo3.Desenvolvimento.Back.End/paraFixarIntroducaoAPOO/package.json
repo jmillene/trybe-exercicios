@@ -1,6 +1,7 @@
 {
-  "name": "exercicio_poo",
+  "name": "parafixarintroducaoapoo",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -8,13 +9,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "typescript": "^4.8.4"
-  },
   "devDependencies": {
     "@tsconfig/node16": "^1.0.3",
-    "@types/node": "^18.8.4",
-    "ts-node": "^10.9.1"
+    "@types/node": "^18.8.4"
   },
-  "description": ""
+  "dependencies": {
+    "typescript": "^4.8.4"
+  }
 }

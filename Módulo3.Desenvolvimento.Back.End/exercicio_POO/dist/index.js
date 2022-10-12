@@ -7,6 +7,8 @@ class Animal {
         this.age = age;
     }
     makeASound() {
-        console.log(`${this.name} says: ${this.sound}`);
+        console.log(`${this.type} ${this.name} says: ${this.sound} ${this.age}`);
     }
 }
+const animal1 = new Animal('Jacare', 'Joao', 'fifi', 14);
+animal1.makeASound();
