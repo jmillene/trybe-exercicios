@@ -42,8 +42,25 @@ class Estudante{
   //   da prova foi ${this._notaDeProva} e a de grupo ${this._notaDeTrabalho}`);
     
   // }
+  somaGrades() :number{
+    return [...this.notaDeProva,...this.notaDeTrabalho].reduce((prev, note)=>{
+const nextNote = note + prev;
+return nextNote;
+    },0)
+  }
+  mediaNotas() : number {
+    const somaGrades = this.somaGrades();
+    const media = this.notaDeProva.length + this.notaDeTrabalho.length;
+    return Math.round(somaGrades/media);
+  }
 }
  const estudante = new Estudante( 'Jé', '7890',  [8], [10])
 // estudante.studante();
 console.log(estudante);
+estudante.notaDeProva=[25,20,23,36]
+estudante.notaDeProva = [45,45]
+console.log('Soma das notas é ', estudante.somaGrades());
+console.log(' A média é', estudante.mediaNotas());
+
+
 
