@@ -7,17 +7,19 @@ export default class Person {
     this._birthDate = birthDate;
 
   }
-  getAge(value: Date): number{
-    const diff = new Date
+  static getAge(value: Date): number{
+    const diff = Math.abs(new Date().getTime() - value.getTime());
+    const yearMs = 31_536_000_000;
+    return Math.floor(diff / yearMs);
 
   }
   get name (): string{
     return this._name;
   }
-  get birthDate (): Date{
+  get birthDate(): Date{
     return this._birthDate;
   }
-  set  name (value: string){
+  set  name(value: string){
     if(value.length < 3){
       throw new Error("O nome deve ter no mínimo 3 catecteres");
     }
@@ -26,7 +28,8 @@ export default class Person {
   set birthDate (value : Date){
     if(this.validaDate(value))
     throw new Error("Você não pode informar uma data do futuro");
-    if(new Date)
+    if(Person.getAge(value) > 120) throw new Error("A pessoa não deve ter mais que 120 anos");
+    
     this._birthDate = value;
   }
   validaDate(value : Date): boolean{
