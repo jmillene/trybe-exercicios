@@ -23,11 +23,14 @@ class Person {
         this._name = value;
     }
     set birthDate(value) {
+        this.validaAniversario(value);
+        this._birthDate = value;
+    }
+    validaAniversario(value) {
         if (this.validaDate(value))
             throw new Error("Você não pode informar uma data do futuro");
         if (Person.getAge(value) > 120)
             throw new Error("A pessoa não deve ter mais que 120 anos");
-        this._birthDate = value;
     }
     validaDate(value) {
         if (value > new Date()) {
