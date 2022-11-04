@@ -1,0 +1,6 @@
+use('books');
+//db.books.find()
+//db.books.find().count()
+//db.books.find({status :"PUBLISH"}).count()
+//db.books.find({},{_id:false},{title:true},{isbn:true},{pageCount:true}).limit(3)
+db.books.find({},{_id:true,title:true, authors:true, status:"MEAP"}).skip(5).limit(10)
